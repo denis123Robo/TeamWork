@@ -19,6 +19,9 @@
     "products": [
        {
         "name":"orange"
+       },
+       {
+        "name": "pear"
        }
     ]
 }
