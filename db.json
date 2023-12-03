@@ -17,6 +17,8 @@
         }
     ],
     "products": [
-       
+       {
+        "name":"orange"
+       }
     ]
 }
