@@ -7,11 +7,12 @@
         <div class="buyButton">Buy</div> 
     </div> */
     let productsArray = [];
-    let xhr = new HMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     let url = 'https://my-json-server.typicode.com/denis123Robo/TeamWork';
-    xhr.open('GET', url + 'products');
+    xhr.open('GET', url + '/products');
     xhr.responseType = 'json';
     xhr.onload = function(){
         let products = xhr.response;
-        console.log(products)
+        console.log(products[0].id)
     }
+    xhr.send();
