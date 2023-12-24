@@ -1,0 +1,51 @@
+.sellerprofile{
+    margin: 0 auto;
+    background-color: rgb(202, 59, 59);
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+    width: 330px;
+    height: 400px;
+    padding: 12px;
+    text-align: center;
+}
+.seller{
+    height: 25%;
+    width: 25%;
+    border-radius: 50%;
+    text-align: center;
+}
+.prod{
+    text-align: right;
+}
+.marketp{
+    text-align: left;
+}
+.b{
+   padding-top: 70px;
+}
+.items{
+    margin: 0 auto;
+    margin-top: 40px;
+    background-color: rgb(202, 59, 59);
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+    width: 85%;
+    height: 250px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#SPText{
+    margin-left: 100px;
+}
+.pfp{
+    height: 100px;
+}
+.sellersprod{
+    background: rgba(0,0,0,0.5);
+    border-radius: 20px;
+    padding:0 10px;
+}

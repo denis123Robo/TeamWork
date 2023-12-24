@@ -13,6 +13,19 @@
     xhr.responseType = 'json';
     xhr.onload = function(){
         let products = xhr.response;
-        console.log(products[0].id)
+        console.log(products.length)
+        for (let i =0; i < products.length; i++) {
+            let html = `
+            <div class="ProductCard">
+                <h1>${products[i].name}</h1>
+                <img class="productPhoto" src="${products[i].photo_url}">
+                <p>Price: ${products[i].price}</p>
+                <p> Description: ${products[i].description}</p>
+                <a href="Seller.html?id=${products[i].author_id}">seller profile</a>
+                <div class="buyButton">Buy</div> 
+            </div> `
+            $("#Products-grid").append(html);
+        }
+
     }
     xhr.send();
