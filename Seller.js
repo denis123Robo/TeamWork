@@ -18,14 +18,23 @@ xhr.onload = function(){
     </div>
     <h1 id="SPText">Seller products</h1>
     <div class="items">
-        <div class="sellersprod">
+        
+    </div>` 
+userInfo.html(html);
+console.log("sdfds");
+}
+xhr.send();
+let productsRequest = new XMLHttpRequest();
+productsRequest.open('GET', url + '/products?author_id='+id)
+productsRequest.responseType = 'json';
+productsRequest.onload = function(){
+    let products = productsRequest.response
+    let html = `
+    <div class="sellersprod">
             <h1>Babijohn</h1>
             <img class="pfp" src="https://ichef.bbci.co.uk/news/976/cpsprodpb/12137/production/_105793047_34cephaswilliamsfinalimagesmaller.jpg">
             <p>Price: 2$</p>
             <p>Description: works good</p>
-        </div>
-    </div>` 
-userInfo.html(html);
-console.log("sdfds");
+        </div>`
 }
 xhr.send();
