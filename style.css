@@ -18,3 +18,38 @@
     border-radius: 7px;
     margin: 15px auto;
 }
+#cartImage{
+    width: 25px;
+    height: 25px;
+}
+#cart-button{
+    border-radius: 25px;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+#cart-button:hover{
+background:blue;
+}
+#cart{
+    position: relative;
+}
+#cart-products{
+    background: green;
+    position: absolute;
+    width: 150px;
+    left: -8rem;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid black;
+}
+#cart_products::before {
+    content: '';
+    border: transparent solid 16px;
+    border-bottom: solid #000 16px;
+    position: relative;
+    top: -2.7rem;
+    left: 15.8rem;
+    z-index: -1;
+}

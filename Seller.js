@@ -1,4 +1,4 @@
-let userInfo = $("#userInfo")
+let userInfo = $("#userInfo");
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 console.log(id)
@@ -17,24 +17,29 @@ xhr.onload = function(){
         <p class="b">balance: ${user.balance}$</p>
     </div>
     <h1 id="SPText">Seller products</h1>
-    <div class="items">
-        
-    </div>` 
+    ` 
 userInfo.html(html);
 console.log("sdfds");
 }
 xhr.send();
+let productsBar = $("#items");
 let productsRequest = new XMLHttpRequest();
 productsRequest.open('GET', url + '/products?author_id='+id)
 productsRequest.responseType = 'json';
 productsRequest.onload = function(){
     let products = productsRequest.response
+    console.log(products.length)
+    for (let i =0; i < products.length; i++) {
+    console.log("fsdfsdf")
     let html = `
     <div class="sellersprod">
-            <h1>Babijohn</h1>
-            <img class="pfp" src="https://ichef.bbci.co.uk/news/976/cpsprodpb/12137/production/_105793047_34cephaswilliamsfinalimagesmaller.jpg">
-            <p>Price: 2$</p>
-            <p>Description: works good</p>
-        </div>`
+        <h1>${products[i].name}</h1>
+        <img class="pfp" src="${products[i].photo_url}">
+        <p>Price: ${products[i].price}$</p>
+        <p>Description:${products[i].description}</p>
+    </div>`
+    productsBar.append(html);
+    }
+    
 }
-xhr.send();
+productsRequest.send();
